@@ -21,6 +21,14 @@ body{
     --border-clr:#E5E7EB;
     --secondary-btn-clr:#2563EB;
     --shiny: rgba(255, 255, 255,0.4);
+    --category-clr:#888888;
+    --pro-category-clr:#93C5FD;
+    --price-clr:#0D1B2A;
+    --list-clr:#333333;
+    --white-list-clr:rgba(255,255,255,0.8);
+    --invisible:rgba(0,0,0,0);
+    --another-description-clr:rgba(255,255,255,0.5);
+    --another-border-clr:rgba(255,255,255,0.1);
 }
 
 .primary-btn{
@@ -34,6 +42,7 @@ body{
     line-height: 1.5rem;
     position: relative;
     overflow: hidden;
+    border: 2px solid var(--primary-btn-clr);
 }
 
 .primary-btn::before{
@@ -61,6 +70,8 @@ body{
 
 .primary-btn:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: var(--invisible);
+    color: var(--primary-btn-clr);
 }
 .primary-btn:hover::before{
     left: 120%;
@@ -73,6 +84,26 @@ body{
 
 .primary-btn:active{
     scale: 0.9;
+}
+
+.secondary-btn{
+    padding: 0.7rem 0;
+    border-radius: 8px;
+    border: 2px solid var(--primary-btn-clr);
+    color: var(--primary-btn-clr);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    transition: all ease 0.5s;
+    background: var(--invisible);
+    cursor: pointer;
+}
+.secondary-btn:active{
+    scale: 0.9;
+}
+.secondary-btn:hover{
+    border: 2px solid var(--price-clr);
+    color: var(--price-clr);
 }
 
 
@@ -274,11 +305,10 @@ section.pricing{
 }
 
 section.pricing div.container{
-padding: 0 4rem;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 section.pricing div.container h1{
@@ -307,7 +337,69 @@ section.pricing div.container div.price-wrapper div.price-card{
     flex-direction: column;
     border: 1px solid var(--border-clr);
     border-radius: 12px;
-    padding: 3rem 0 0 ;
+    width: 100%;
+    padding: 2rem ;
+    gap: 1.25rem;
+}
+section.pricing div.container div.price-wrapper div.price-card div span.category{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--category-clr);
+    line-height: 1.2rem;
+}
+section.pricing div.container div.price-wrapper div.price-card div span.price{
+    display: flex;
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: var(--price-clr);
+    line-height: 2.9rem;
+    padding: 0.5rem 0;
+}
+section.pricing div.container div.price-wrapper div.price-card div p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--category-clr);
+    line-height: 1.2rem;
+}
+section.pricing div.container div.price-wrapper div.selected{
+    background: var(--price-clr);
+}
+section.pricing div.container div.price-wrapper div.selected div span.category{
+    color: var(--pro-category-clr);
+}
+section.pricing div.container div.price-wrapper div.selected div span.price{
+    color: var(--white-text-clr);
+}
+section.pricing div.container div.price-wrapper div.selected div p{
+    color: var(--another-description-clr);
+}
+section.pricing div.container div.price-wrapper div.price-card ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 1rem;
+    border-top: 1px solid var(--border-clr);
+}
+section.pricing div.container div.price-wrapper div.price-card ul li{
+    color: var(--list-clr);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3rem;
+}
+section.pricing div.container div.price-wrapper div.selected ul{
+    border-top: 1px solid var(--another-border-clr);
+}
+section.pricing div.container div.price-wrapper div.selected ul li{
+    color: var(--white-list-clr);
+}
+
+section.pricing div.container div.price-wrapper div.selected button.primary-btn{
+    padding: 0.7rem 0;
+    border-radius: 8px;
+    font-weight: 600;
+    
 }
 
 /* Pricing Section Style End  */
