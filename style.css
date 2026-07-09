@@ -1,3 +1,4 @@
+/* Basic Styles Start */
 *{
     padding: 0;
     margin: 0;
@@ -18,19 +19,48 @@ body{
     --description-text-clr:#575757;
 }
 
+.primary-btn{
+    background: var(--primary-btn-clr);
+    color: var(--white-text-clr);
+    padding: 0.9rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.primary-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.primary-btn:active{
+    scale: 0.9;
+}
+
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Basic Styles End */
+
+/* Header Style Start */
+
+
+
 header{
     background: var(--white-text-clr);
+    padding: 1.9rem 0;
+}
+header img{
+    max-width: 100%;
 }
 
 header nav.container{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.9rem 0;
 }
 
 header nav.container ul.nav-items{
@@ -39,6 +69,17 @@ header nav.container ul.nav-items{
     gap: 1.5rem;
 }
 
-/* .primary-btn{
-    background: ;
-} */
+header nav.container ul.nav-items li{
+    font-size: 1rem;
+    color: var(--description-text-clr);
+    font-weight: 400;
+}
+
+header nav.container button.primary-btn{
+    height: 48;
+    width: 188px;
+}
+
+/* Header Style End */
+
+/* Banner Section Style Start  */
