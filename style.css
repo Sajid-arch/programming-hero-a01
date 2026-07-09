@@ -17,6 +17,7 @@ body{
     --black-text-clr:#000102;
     --white-text-clr:#ffffff;
     --description-text-clr:#575757;
+    --white-description-text-clr:rgba(255, 255, 255, 0.9);
 }
 
 .primary-btn{
@@ -24,9 +25,10 @@ body{
     color: var(--white-text-clr);
     padding: 0.9rem;
     border-radius: 10px;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.5s ease;
     cursor: pointer;
+    line-height: 1.5rem;
 }
 
 .primary-btn:hover{
@@ -52,6 +54,8 @@ body{
 header{
     background: var(--white-text-clr);
     padding: 1.9rem 0;
+    position: sticky;
+    top: 0;
 }
 header img{
     max-width: 100%;
@@ -78,8 +82,59 @@ header nav.container ul.nav-items li{
 header nav.container button.primary-btn{
     height: 48;
     width: 188px;
+    font-size: 1rem;
 }
 
 /* Header Style End */
 
+
 /* Banner Section Style Start  */
+
+section.banner{
+    min-height: 75vh;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(./Images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+}
+section.banner div.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75vh;
+}
+section.banner div.container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.banner h1{
+    font-size: 5rem;
+    color: var(--white-text-clr);
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -3.2px;
+    padding-bottom: 1rem;
+}
+section.banner h1 span{
+    font-style: italic;
+}
+
+section.banner p{
+    font-size: 1.2rem;
+    color: var(--white-description-text-clr);
+    font-weight: 400;
+    text-align: center;
+    max-width: 650px;
+    line-height: 24px;
+}
+
+section.banner div.container button.primary-btn{
+    height: 74px;
+    width: 282px;
+    font-size: 1.5rem;
+}
+
+/* Banner Section Style End  */
