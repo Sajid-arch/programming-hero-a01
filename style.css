@@ -18,6 +18,8 @@ body{
     --white-text-clr:#ffffff;
     --description-text-clr:#575757;
     --white-description-text-clr:rgba(255, 255, 255, 0.9);
+    --border-clr:#E5E7EB;
+    --secondary-btn-clr:#2563EB;
 }
 
 .primary-btn{
@@ -138,3 +140,88 @@ section.banner div.container button.primary-btn{
 }
 
 /* Banner Section Style End  */
+
+/* Speakers Section Style Start */
+
+section.speaker{
+    padding: 4rem 0;
+}
+section.speaker div.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.speaker div.container h1{
+    font-size: 3.5rem;
+    line-height: 4rem;
+    color: var(--black-text-clr);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+section.speaker div.container div.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+section.speaker div.container div.card-wrapper div.card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-clr);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+section.speaker div.container div.card-wrapper div.card div.img-wrap{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.speaker div.container div.card-wrapper div.card div.img-wrap img{
+    width: 100%;
+    transition: all 0.5s ease;
+}
+section.speaker div.container div.card-wrapper div.card:hover div.img-wrap img{
+    scale: 1.1;
+}
+
+section.speaker div.container div.card-wrapper div.card div.info{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:center;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+section.speaker div.container div.card-wrapper div.card div.info span{
+    font-size: 0.75rem;
+    color: var(--secondary-btn-clr);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 1.1rem;
+    text-transform: uppercase;
+}
+section.speaker div.container div.card-wrapper div.card div.info h2{
+    font-size: 1.25rem;
+    color: var(--black-text-clr);
+    font-weight: 700;
+    line-height: 1.6rem;
+}
+section.speaker div.container div.card-wrapper div.card div.info p{
+    font-size: 0.9rem;
+    color: var(--description-text-clr);
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+
+/* Speakers Section Style End */
