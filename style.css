@@ -20,6 +20,7 @@ body{
     --white-description-text-clr:rgba(255, 255, 255, 0.9);
     --border-clr:#E5E7EB;
     --secondary-btn-clr:#2563EB;
+    --shiny: rgba(255, 255, 255,0.4);
 }
 
 .primary-btn{
@@ -31,10 +32,43 @@ body{
     transition: all 0.5s ease;
     cursor: pointer;
     line-height: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::before{
+    content:"";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 10%;
+    left: 35%;
+    background:var(--shiny) ;
+    transition:all ease 0.5s;
+    opacity: 0;
+}
+.primary-btn::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 10%;
+    right: 35%;
+    background:var(--shiny) ;
+    transition:all ease 0.5s;
+    opacity: 0;
 }
 
 .primary-btn:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.primary-btn:hover::before{
+    left: 120%;
+    opacity: 1;
+}
+.primary-btn:hover:after{
+    right: 120%;
+    opacity: 1;
 }
 
 .primary-btn:active{
@@ -58,6 +92,8 @@ header{
     padding: 1.9rem 0;
     position: sticky;
     top: 0;
+    z-index: 9999;
+    border-bottom: 1px solid var(--border-clr);
 }
 header img{
     max-width: 100%;
@@ -75,10 +111,16 @@ header nav.container ul.nav-items{
     gap: 1.5rem;
 }
 
-header nav.container ul.nav-items li{
+header nav.container ul.nav-items li a{
     font-size: 1rem;
     color: var(--description-text-clr);
     font-weight: 400;
+    transition: all ease 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+}
+header nav.container ul.nav-items li a:hover{
+    color: var(--primary-btn-clr);
 }
 
 header nav.container button.primary-btn{
@@ -93,19 +135,19 @@ header nav.container button.primary-btn{
 /* Banner Section Style Start  */
 
 section.banner{
-    min-height: 75vh;
+    min-height: 70vh;
     background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(./Images/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 4rem 0;
+    padding: 7rem 0 5rem;
 }
 section.banner div.container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: 75vh;
+    min-height: 70vh;
 }
 section.banner div.container div{
     display: flex;
@@ -158,7 +200,7 @@ section.speaker div.container h1{
     color: var(--black-text-clr);
     font-weight: 700;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 3.5rem;
 }
 
 section.speaker div.container div.card-wrapper{
@@ -225,3 +267,47 @@ section.speaker div.container div.card-wrapper div.card div.info p{
 
 
 /* Speakers Section Style End */
+
+/* Pricing Section Style Start  */
+section.pricing{
+    padding: 4rem 0;
+}
+
+section.pricing div.container{
+padding: 0 4rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+section.pricing div.container h1{
+    color: var(--black-text-clr);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.9rem;
+    padding-bottom: 1rem;
+}
+section.pricing div.container p{
+    color: var(--description-text-clr);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+section.pricing div.container div.price-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    padding: 3rem 0 0 ;
+}
+
+section.pricing div.container div.price-wrapper div.price-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-clr);
+    border-radius: 12px;
+    padding: 3rem 0 0 ;
+}
+
+/* Pricing Section Style End  */
