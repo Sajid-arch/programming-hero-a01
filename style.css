@@ -198,9 +198,6 @@ section.banner h1{
     letter-spacing: -3.2px;
     padding-bottom: 1rem;
 }
-section.banner h1 span{
-    font-style: italic;
-}
 
 section.banner p{
     font-size: 1.2rem;
@@ -652,4 +649,39 @@ hr{
 }
 
 /* Footer Style End  */
+
+
+/* Target the element you want to style (e.g., body or a specific scroll container) */
+html, body {
+  /* 1. Modern Standard Method (Firefox, Chrome, Safari, Edge) */
+  /* Syntax: scrollbar-color: [Thumb Color] [Track Color]; */
+  scrollbar-color: var(--bullet-point-clr) var(--border-clr);
+
+  /* Optional: Adjust thickness (auto, thin, or none) */
+  scrollbar-width: thin; 
+}
+
+/* 2. Legacy WebKit Method (Older Chrome, Safari, and Edge versions) */
+/* Sets the width or height of the scrollbar */
+html::-webkit-scrollbar {
+  width: 10px;     /* Width for vertical scrollbars */
+  height: 10px;    /* Height for horizontal scrollbars */
+}
+
+/* Styles the background track */
+html::-webkit-scrollbar-track {
+  background: var(--border-clr); 
+}
+
+/* Styles the draggable thumb handle */
+html::-webkit-scrollbar-thumb {
+  background: var(--bullet-point-clr); 
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Optional hover state for the WebKit thumb */
+html::-webkit-scrollbar-thumb:hover {
+  background: #555555; 
+}
+
 
