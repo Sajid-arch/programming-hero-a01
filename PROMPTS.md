@@ -1,0 +1,1 @@
+Check the website ui image and tell me which section should I add in Something missing section which will be relevant with the website content. Don't give me direct codes. Help me with ideas. Help me with a ui design for that particular section.
