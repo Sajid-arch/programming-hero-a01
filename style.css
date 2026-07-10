@@ -29,6 +29,7 @@ body{
     --invisible:rgba(0,0,0,0);
     --another-description-clr:rgba(255,255,255,0.5);
     --another-border-clr:rgba(255,255,255,0.1);
+    --bullet-point-clr:#60A5FA;
 }
 
 .primary-btn{
@@ -394,6 +395,13 @@ section.pricing div.container div.price-wrapper div.selected ul{
 section.pricing div.container div.price-wrapper div.selected ul li{
     color: var(--white-list-clr);
 }
+section.pricing div.container div.price-wrapper div.price-card ul li::marker{
+    color: var(--secondary-btn-clr);
+}
+
+section.pricing div.container div.price-wrapper div.selected ul li::marker{
+    color: var(--bullet-point-clr);
+}
 
 section.pricing div.container div.price-wrapper div.selected button.primary-btn{
     padding: 0.7rem 0;
@@ -403,3 +411,116 @@ section.pricing div.container div.price-wrapper div.selected button.primary-btn{
 }
 
 /* Pricing Section Style End  */
+
+
+/* Footer Style Start  */
+
+footer{
+    background: var(--price-clr) ;
+}
+footer div.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+footer div.main-footer{
+    padding: 3rem 0;
+}
+footer div.other-text{
+    padding: 1.5rem 0;
+    color: var(--shiny);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+footer div.other-text a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer div.other-text div{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+footer div.container div img{
+    max-width:100%;
+}
+footer div.container ul{
+    list-style: none;
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+footer div.container nav ul.nav-items li a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-list-clr);
+    transition: color 0.5s ease;
+}
+footer div.container nav ul.nav-items li a:hover{
+    color: var(--pro-category-clr);
+}
+
+footer div.container div.contacts ul li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer div.container div.contacts ul li> a{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--another-border-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div.container div.contacts ul li> a i{
+    color: var(--white-list-clr);
+    font-size: 1rem;
+}
+
+
+
+footer div.container div.contacts ul li h4{
+    color: var(--white-list-clr);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+footer div.container div.contacts ul li h4 a{
+    text-decoration: none;
+    color: inherit;
+}
+footer div.container div.contacts div.social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    padding: 1.5rem 0 0;
+}
+
+footer div.container div.contacts div.social-icons a{
+    background: var(--white-list-clr);
+    color: var(--primary-btn-clr);
+    font-size: 1rem;
+    height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+}
+footer div.container div.contacts div.social-icons a:hover{
+    background: var(--bullet-point-clr);
+    color: var(--white-text-clr);
+}
+
+
+hr{
+    height: 1px;
+    background: var(--another-border-clr);
+}
+
+/* Footer Style End  */
